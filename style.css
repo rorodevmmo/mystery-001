@@ -31,5 +31,332 @@ input:focus{border-color:var(--gold);box-shadow:0 0 0 3px rgba(216,173,92,.08)}
 button{border:0;border-radius:9px;padding:14px 16px;font-weight:700;letter-spacing:.5px;width:100%;margin-top:12px}.primary{background:var(--gold);color:#17120b}.secondary{background:#27212d;color:var(--text);border:1px solid #443b4c}
 button:disabled{opacity:.45;cursor:not-allowed}.status{min-height:18px;color:var(--gold);font-size:12px;margin:10px 0 0}.section-title{display:flex;justify-content:space-between;align-items:flex-start}.tokens{display:flex;gap:10px;margin:18px 0}.token{flex:1;border:1px solid var(--line);border-radius:10px;padding:12px;text-align:center;color:#625b67}.token.me{border-color:var(--gold);color:var(--gold)}
 .divider{height:1px;background:var(--line);margin:20px 0}.next,.final,.how{margin-top:18px}.next{text-align:center}.final{text-align:center}.final-code{font-family:Cinzel;font-size:42px;color:var(--gold);letter-spacing:8px;margin-top:22px}.hidden{display:none!important}
+/* =========================================================
+   IDENTITÉ DES VILAINS
+   ========================================================= */
+
+
+/* =========================================================
+   JAFAR — ROUGE / DÉSERT
+   ========================================================= */
+
+body.theme-jafar {
+  --bg: #180806;
+  --bg-soft: #2b100b;
+  --panel: rgba(55, 20, 12, 0.88);
+  --panel-border: rgba(218, 142, 55, 0.45);
+  --text: #f8e4c1;
+  --muted: #c9a982;
+  --accent: #c93524;
+  --accent-light: #ef8b38;
+  --gold: #d9a441;
+
+  background:
+    radial-gradient(circle at 50% -10%, rgba(220, 91, 35, .25), transparent 45%),
+    radial-gradient(circle at 15% 80%, rgba(175, 55, 25, .15), transparent 35%),
+    linear-gradient(135deg, #120504, #2a0b07 55%, #160605);
+
+  color: var(--text);
+}
+
+
+/* sable / poussière */
+body.theme-jafar::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  opacity: .22;
+
+  background-image:
+    radial-gradient(circle, rgba(238, 177, 91, .45) 1px, transparent 1px),
+    radial-gradient(circle, rgba(238, 177, 91, .25) 1px, transparent 1px);
+
+  background-size: 90px 90px, 140px 140px;
+  background-position: 0 0, 35px 60px;
+}
+
+
+/* panneaux */
+body.theme-jafar .panel,
+body.theme-jafar .clue-box,
+body.theme-jafar .player-card {
+  background:
+    linear-gradient(
+      145deg,
+      rgba(72, 25, 14, .94),
+      rgba(34, 12, 8, .94)
+    );
+
+  border-color: rgba(217, 164, 65, .38);
+
+  box-shadow:
+    0 10px 35px rgba(0, 0, 0, .45),
+    inset 0 0 25px rgba(217, 164, 65, .04);
+}
+
+
+/* titres */
+body.theme-jafar h1,
+body.theme-jafar h2,
+body.theme-jafar .room-title {
+  color: #f2c56b;
+  text-shadow:
+    0 0 18px rgba(239, 139, 56, .25);
+}
+
+
+/* boutons */
+body.theme-jafar button {
+  background: linear-gradient(135deg, #a82418, #d95625);
+  border-color: #e29a45;
+  color: #fff1d2;
+
+  box-shadow:
+    0 0 18px rgba(201, 53, 36, .25);
+}
+
+body.theme-jafar button:hover {
+  background: linear-gradient(135deg, #d13a25, #ed7830);
+}
+
+
+/* =========================================================
+   URSULA — VIOLET / ABYSSES
+   ========================================================= */
+
+body.theme-ursula {
+  --bg: #090313;
+  --bg-soft: #17062b;
+  --panel: rgba(28, 10, 45, .88);
+  --panel-border: rgba(174, 91, 219, .42);
+  --text: #eee0fa;
+  --muted: #bba8ca;
+  --accent: #9b42bd;
+  --accent-light: #d07bea;
+  --aqua: #46d7d0;
+
+  background:
+    radial-gradient(circle at 20% 10%, rgba(148, 48, 180, .28), transparent 38%),
+    radial-gradient(circle at 85% 75%, rgba(27, 159, 165, .18), transparent 40%),
+    linear-gradient(160deg, #08020f, #19062c 50%, #050711);
+
+  color: var(--text);
+}
+
+
+/* bulles */
+body.theme-ursula::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  opacity: .25;
+
+  background-image:
+    radial-gradient(circle at 15% 25%, transparent 0 7px, rgba(94, 218, 213, .25) 8px, transparent 9px),
+    radial-gradient(circle at 75% 65%, transparent 0 11px, rgba(182, 105, 222, .22) 12px, transparent 13px),
+    radial-gradient(circle at 40% 80%, transparent 0 5px, rgba(94, 218, 213, .18) 6px, transparent 7px);
+
+  background-size: 190px 230px, 270px 310px, 150px 180px;
+}
+
+
+/* panneaux */
+body.theme-ursula .panel,
+body.theme-ursula .clue-box,
+body.theme-ursula .player-card {
+  background:
+    linear-gradient(
+      150deg,
+      rgba(43, 13, 61, .94),
+      rgba(13, 8, 28, .95)
+    );
+
+  border-color: rgba(174, 91, 219, .4);
+
+  box-shadow:
+    0 12px 40px rgba(0, 0, 0, .5),
+    inset 0 0 30px rgba(155, 66, 189, .06);
+}
+
+
+/* titres */
+body.theme-ursula h1,
+body.theme-ursula h2,
+body.theme-ursula .room-title {
+  color: #d88af0;
+
+  text-shadow:
+    0 0 18px rgba(208, 123, 234, .3);
+}
+
+
+/* petits éléments */
+body.theme-ursula .eyebrow {
+  color: var(--aqua);
+}
+
+
+/* boutons */
+body.theme-ursula button {
+  background: linear-gradient(135deg, #71308f, #a94dc4);
+  border-color: #d07bea;
+  color: #f8eaff;
+
+  box-shadow:
+    0 0 22px rgba(155, 66, 189, .28);
+}
+
+body.theme-ursula button:hover {
+  background: linear-gradient(135deg, #9140b2, #c263df);
+}
+
+
+/* =========================================================
+   HADÈS — BLEU / FLAMMES
+   ========================================================= */
+
+body.theme-hades {
+  --bg: #020813;
+  --bg-soft: #06152b;
+  --panel: rgba(6, 20, 40, .9);
+  --panel-border: rgba(51, 176, 255, .45);
+  --text: #dff5ff;
+  --muted: #91b9d2;
+  --accent: #168cff;
+  --accent-light: #4dd9ff;
+  --fire: #25bfff;
+
+  background:
+    radial-gradient(circle at 50% 0%, rgba(22, 140, 255, .3), transparent 40%),
+    radial-gradient(circle at 20% 90%, rgba(0, 214, 255, .16), transparent 35%),
+    linear-gradient(160deg, #01050c, #04152b 52%, #01050d);
+
+  color: var(--text);
+}
+
+
+/* halo de flammes bleues */
+body.theme-hades::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+
+  background:
+    radial-gradient(
+      ellipse at 10% 100%,
+      rgba(0, 174, 255, .35),
+      transparent 28%
+    ),
+    radial-gradient(
+      ellipse at 90% 100%,
+      rgba(24, 118, 255, .32),
+      transparent 28%
+    ),
+    radial-gradient(
+      ellipse at 50% 110%,
+      rgba(0, 221, 255, .28),
+      transparent 35%
+    );
+
+  filter: blur(15px);
+}
+
+
+/* panneaux */
+body.theme-hades .panel,
+body.theme-hades .clue-box,
+body.theme-hades .player-card {
+  background:
+    linear-gradient(
+      150deg,
+      rgba(7, 29, 57, .95),
+      rgba(2, 10, 24, .96)
+    );
+
+  border-color: rgba(51, 176, 255, .42);
+
+  box-shadow:
+    0 12px 45px rgba(0, 0, 0, .55),
+    0 0 25px rgba(22, 140, 255, .08),
+    inset 0 0 30px rgba(77, 217, 255, .05);
+}
+
+
+/* titres */
+body.theme-hades h1,
+body.theme-hades h2,
+body.theme-hades .room-title {
+  color: #52d9ff;
+
+  text-shadow:
+    0 0 8px rgba(77, 217, 255, .6),
+    0 0 25px rgba(22, 140, 255, .4);
+}
+
+
+/* éléments importants */
+body.theme-hades .eyebrow {
+  color: #4dd9ff;
+}
+
+
+/* boutons */
+body.theme-hades button {
+  background: linear-gradient(135deg, #075bc1, #009bd8);
+  border-color: #52d9ff;
+  color: #e8fbff;
+
+  box-shadow:
+    0 0 20px rgba(22, 140, 255, .35);
+}
+
+body.theme-hades button:hover {
+  background: linear-gradient(135deg, #087be0, #13bce9);
+}
+
+
+/* =========================================================
+   CODE FINAL
+   ========================================================= */
+
+body.theme-jafar .final-code {
+  color: #f2c56b;
+  text-shadow: 0 0 25px rgba(239, 139, 56, .5);
+}
+
+body.theme-ursula .final-code {
+  color: #d88af0;
+  text-shadow: 0 0 25px rgba(208, 123, 234, .5);
+}
+
+body.theme-hades .final-code {
+  color: #52d9ff;
+  text-shadow:
+    0 0 10px rgba(77, 217, 255, .8),
+    0 0 30px rgba(22, 140, 255, .6);
+}
+
+
+/* =========================================================
+   ICÔNE DU VILAIN
+   ========================================================= */
+
+body.theme-jafar #roleSymbol {
+  color: #e4b04d;
+  text-shadow: 0 0 15px rgba(228, 176, 77, .5);
+}
+
+body.theme-ursula #roleSymbol {
+  color: #d76af0;
+  text-shadow: 0 0 15px rgba(215, 106, 240, .5);
+}
+
+body.theme-hades #roleSymbol {
+  color: #4dd9ff;
+  text-shadow: 0 0 18px rgba(77, 217, 255, .8);
+}
 @media(max-width:650px){.role-grid,.players{grid-template-columns:1fr}.door{grid-template-columns:110px 1fr;padding:16px}.door-frame{height:170px}.shell{width:min(100% - 18px,920px)}}
 @media(prefers-reduced-motion:no-preference){.door-frame.open{animation:open .8s ease forwards}@keyframes open{50%{filter:brightness(1.5);transform:scale(1.02)}100%{filter:brightness(1)}}}

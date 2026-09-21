@@ -1,16 +1,17 @@
 const ROLES=[
- {id:"jafar",name:"JAFAR",symbol:"☽"},
- {id:"scar",name:"SCAR",symbol:"✦"},
- {id:"ursula",name:"URSULA",symbol:"◈"}
+ {id:"jafar",name:"JAFAR",symbol:"🐍",theme:"jafar"},
+ {id:"ursula",name:"URSULA",symbol:"🐙",theme:"ursula"},
+ {id:"hades",name:"HADÈS",symbol:"😈",theme:"hades"}
 ];
+
 
 const ROOMS=[
 {
  title:"LE CADENAS DES TROIS CHIFFRES",
  intro:"",
  clues:[
-  "Mon chiffre et celui de Scar font 9",
-  "Mon chiffre est le triple de celui d'Ursula.",
+  "Mon chiffre et celui d'Ursula font 9",
+  "Mon chiffre est le triple de celui d'Hades.",
   "Mon chiffre est le plus petit nombre premier"
  ],
  code:"362",
@@ -84,30 +85,41 @@ const ROOMS=[
   "<br>YVZLYA.<br>"
  ],
  code:"TRESOR",
- next:"N = 7. En reculant de 7 crans, YVZLYA devient ROSERT. À l'envers : TRESOR. Vous avez terminé le parcours."
+  next:"N = 7. En reculant de 7 crans, YVZLYA devient ROSERT. À l'envers : TRESOR. Vous avez terminé le parcours.",
+  finalCode:"731"
 }
 ];
 
-const p=new URLSearchParams(location.search);
 
-const player=(p.get("player")||"jafar").toLowerCase();
+const ROOM_IDS = [
+  "K7xP2",
+  "mQ84Z",
+  "T9vL3",
+  "aX6R1",
+  "P4nW8"
+];
 
-const roomNum=Math.max(
-  1,
-  Math.min(
-    ROOMS.length,
-    Number(p.get("room")||1)
-  )
-);
+const p = new URLSearchParams(location.search);
 
-const room=ROOMS[roomNum-1];
+const player = (p.get("player") || "jafar").toLowerCase();
 
-const roleIndex=Math.max(
+const roomId = p.get("r");
+
+let roomNum = ROOM_IDS.indexOf(roomId) + 1;
+
+// Si aucune salle valide n'est donnée, on commence à la salle 1
+if(roomNum < 1){
+  roomNum = 1;
+}
+
+const room = ROOMS[roomNum - 1];
+
+const roleIndex = Math.max(
   0,
-  ROLES.findIndex(r=>r.id===player)
+  ROLES.findIndex(r => r.id === player)
 );
 
-const role=ROLES[roleIndex];
+const role = ROLES[roleIndex];
 
 function $(s){
   return document.querySelector(s);
@@ -115,6 +127,7 @@ function $(s){
 
 
 if(location.pathname.endsWith("room.html")){
+  document.body.classList.add(`theme-${role.theme}`);
 
   $("#roomCounter").textContent=
     `SALLE ${String(roomNum).padStart(2,"0")} / ${ROOMS.length}`;
@@ -189,6 +202,7 @@ if(location.pathname.endsWith("room.html")){
 
       }else{
 
+        $("#finalCode").textContent = room.finalCode || "731";
         $("#final").classList.remove("hidden");
 
       }
@@ -203,11 +217,11 @@ if(location.pathname.endsWith("room.html")){
 
 
   // SALLE SUIVANTE
-  $("#nextBtn").onclick=()=>{
+$("#nextBtn").onclick=()=>{
 
-    location.href=
-      `room.html?player=${encodeURIComponent(player)}&room=${roomNum+1}`;
+  location.href =
+    `room.html?player=${encodeURIComponent(player)}&r=${ROOM_IDS[roomNum]}`;
 
-  };
+};
 
 }
