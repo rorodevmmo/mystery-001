@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <meta name="theme-color" content="#08070c">
+  <title>Mystery 001 — Salle</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="topbar">
+    <div><span class="eyebrow">M·001</span><strong id="teamName">ÉQUIPE</strong></div>
+    <div class="room-counter" id="roomCounter">SALLE 01/05</div>
+  </header>
+
+  <main class="shell game">
+    <section class="hero">
+      <p class="eyebrow" id="roomEyebrow">SALLE 01</p>
+      <h1 id="roomTitle">L'ACCUEIL</h1>
+      <p id="roomIntro"></p>
+    </section>
+
+    <section class="players" id="players"></section>
+
+    <section class="door">
+      <div class="door-frame">
+        <div class="door-light"></div>
+        <div class="door-number" id="doorNumber">01</div>
+        <div class="lock" id="lock">🔒</div>
+      </div>
+      <div>
+        <p class="eyebrow">PORTE</p>
+        <h2 id="doorTitle">PORTE VERROUILLÉE</h2>
+        <p id="doorHint"></p>
+      </div>
+    </section>
+
+    <section class="personal panel">
+      <div class="role-head">
+        <span id="roleSymbol" class="role-symbol">?</span>
+        <div>
+          <p class="eyebrow">VOTRE DOSSIER</p>
+          <h2 id="roleName">CHOISISSEZ VOTRE RÔLE</h2>
+        </div>
+      </div>
+      <div id="clue"></div>
+      <label for="answer">Votre réponse</label>
+      <input id="answer" autocomplete="off" placeholder="Entrez votre réponse">
+      <button id="answerBtn" class="primary">VALIDER MON INDICE</button>
+      <p id="answerStatus" class="status"></p>
+    </section>
+
+    <section class="team panel">
+      <div class="section-title">
+        <div>
+          <p class="eyebrow">COFFRE-FORT DE L'ÉQUIPE</p>
+          <h2>CODE DE LA PORTE</h2>
+        </div>
+        <span id="teamProgress">0 / 3</span>
+      </div>
+      <p class="muted">Chaque joueuse doit valider son indice. Quand les trois symboles sont allumés, entrez le code final.</p>
+      <div id="tokens" class="tokens"></div>
+      <input id="doorCode" inputmode="numeric" maxlength="8" placeholder="CODE">
+      <button id="doorBtn" class="secondary">OUVRIR LA PORTE</button>
+      <p id="doorStatus" class="status"></p>
+    </section>
+
+    <section id="nextRoom" class="panel next hidden">
+      <p class="eyebrow">ACCÈS AUTORISÉ</p>
+      <h2>LA PORTE S'OUVRE.</h2>
+      <p id="nextText"></p>
+      <button id="nextBtn" class="primary">ENTRER DANS LA SALLE SUIVANTE</button>
+    </section>
+
+    <section id="final" class="panel final hidden">
+      <div class="sigil">M·001</div>
+      <p class="eyebrow">DOSSIER TERMINÉ</p>
+      <h2>LES TROIS PORTES SONT OUVERTES.</h2>
+      <p>Vous avez réussi à travailler ensemble jusqu'au bout.</p>
+      <div class="final-code" id="finalCode">OMEGA</div>
+    </section>
+  </main>
+  <script src="game.js"></script>
+</body>
+</html>
