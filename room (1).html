@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#08070c">
+<title>Mystery 001 — Salle</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="topbar">
+  <a href="index.html" class="brand">M·001</a>
+  <div id="roomCounter">SALLE 01 / 05</div>
+</header>
+
+<main class="shell game">
+  <section class="hero">
+    <p class="eyebrow" id="roomEyebrow">SALLE 01</p>
+    <h1 id="roomTitle">L'ACCUEIL</h1>
+    <p id="roomIntro"></p>
+  </section>
+
+  <section class="players" id="players"></section>
+
+  <section class="door">
+    <div class="door-frame" id="doorFrame">
+      <div class="door-light"></div>
+      <div class="door-number" id="doorNumber">01</div>
+      <div class="lock" id="lock">🔒</div>
+    </div>
+    <div>
+      <p class="eyebrow">OBJECTIF</p>
+      <h2 id="doorTitle">TROUVER LE CODE</h2>
+      <p id="doorHint" class="muted"></p>
+    </div>
+  </section>
+
+  <section class="panel personal">
+    <div class="role-head">
+      <span id="roleSymbol" class="role-symbol">?</span>
+      <div>
+        <p class="eyebrow">VOTRE DOSSIER</p>
+        <h2 id="roleName">—</h2>
+      </div>
+    </div>
+    <div id="clue"></div>
+    <label for="answer">Réponse à votre indice</label>
+    <input id="answer" autocomplete="off" placeholder="Entrez votre réponse">
+    <button id="answerBtn" class="primary">VALIDER MON INDICE</button>
+    <p id="answerStatus" class="status"></p>
+  </section>
+
+  <section class="panel team">
+    <div class="section-title">
+      <div>
+        <p class="eyebrow">ÉTAPE COMMUNE</p>
+        <h2>LES TROIS INDICES</h2>
+      </div>
+    </div>
+    <p class="muted">Chaque joueuse valide son indice sur son propre téléphone. Ensuite, mettez vos trois réponses en commun.</p>
+    <div id="tokens" class="tokens"></div>
+    <div class="divider"></div>
+    <label for="doorCode">Code de la porte</label>
+    <input id="doorCode" autocomplete="off" placeholder="Entrez le code trouvé">
+    <button id="doorBtn" class="secondary">DÉVERROUILLER</button>
+    <p id="doorStatus" class="status"></p>
+  </section>
+
+  <section id="nextRoom" class="panel next hidden">
+    <p class="eyebrow">ACCÈS AUTORISÉ</p>
+    <h2>LA PORTE S'OUVRE.</h2>
+    <p id="nextText" class="muted"></p>
+    <button id="nextBtn" class="primary">ENTRER DANS LA SALLE SUIVANTE</button>
+  </section>
+
+  <section id="final" class="panel final hidden">
+    <div class="sigil">M·001</div>
+    <p class="eyebrow">DOSSIER TERMINÉ</p>
+    <h2>LES TROIS PORTES SONT OUVERTES.</h2>
+    <p class="muted">Vous avez réussi le parcours.</p>
+    <div class="final-code">OMEGA</div>
+  </section>
+
+  <section class="panel how">
+    <p class="eyebrow">RÈGLE DU JEU</p>
+    <p class="muted">Il n'y a aucun serveur derrière ce jeu. Chaque téléphone possède son propre dossier. Les joueuses doivent donc communiquer physiquement pour combiner leurs indices.</p>
+  </section>
+</main>
+<script src="game.js"></script>
+</body>
+</html>
