@@ -71,12 +71,7 @@ const ROOMS=[
  title:"LA REPONSE FINALE",
  intro:"",
  clues:[
-  "Dans notre royaume, ils sont 7.",
-  "Six sont déjà prêts pour l'aventure…",
-  "Il n'est ni roi, ni prince, ni héros.",
-  "Pourtant, il a déjà sa place parmi les grands.",
-  "Il est souvent nommé comme connaissance du roi de la savane",
-  "Qui est-ce ?"
+  "Dans notre royaume, ils sont 7. Six sont déjà prêts pour l'aventure… Il n'est ni roi, ni prince, ni héros. Pourtant, il a déjà sa place parmi les grands. Il est souvent nommé comme connaissance du roi de la savane Qui est-ce ?"
  ],
  code:"Rafael",
   next:"",
