@@ -47,46 +47,40 @@ const ROOMS=[
 },
 
 {
- title:"LE PASSAGE SECRET",
- intro:"Une porte secrète possède 4 symboles dans un ordre précis. Chaque symbole correspond à un chiffre différent de 1 à 4. Croisez les indices des trois téléphones pour trouver le code.",
+ title:"TROUVE L'INTRUS",
+ intro:"Qui est l'intrus parmi ces personnages Disney ?",
  clues:[
-  "☽ est placé avant ✦.<br><br>◈ n'est pas le 4.",
-
-  "★ est placé immédiatement après ◈.<br><br>✦ n'est pas le 1.",
-
-  "☽ n'est ni le 1 ni le 4.<br><br>◈ est placé avant ☽."
+  "Mickey | Donald | Dingo | Pluto | Simba | Nala | Timon | Pumbaa | Bambi | Dumbo | Marie | Figaro | Baloo | Winnie | Tigrou | Nemo | Dory | Stitch | Aladdin | Sven | Pascal | Mushu | Abu | Meeko | Lady"
  ],
- code:"3412",
- next:"Les indices imposent l'ordre ◈ → ★ → ☽ → ✦. Donc ◈=1, ★=2, ☽=3 et ✦=4. Dans l'ordre demandé ☽ ✦ ◈ ★, le code est 3412."
+ code:"Aladdin",
+ next:""
 },
 
 {
- title:"LE CODE DU COFFRE",
- intro:"",
+ title:"TROUVE L'INTRUS",
+ intro:"Qui est l'intrus parmi ces personnages Disney ?",
  clues:[
-  "<br>6 – 9 – 8 → aucun chiffre correct.<br>",
-
-  "<br>1 – 4 – 9 → deux chiffres corrects.<br>",
-
-  "<br>7 – 8 – 1 → deux chiffres corrects.<br>"
+  "Mickey | Donald | Simba | Aladdin | Ariel | Belle | Mulan | Pocahontas | Cendrillon | Blanche-Neige | Jasmine | Raiponce | Tiana | Vaiana | Elsa | Anna | Mérida | Woody | Hercule | Tarzan | Peter Pan | Robin des Bois | Kuzco | Stitch | Aurore"
  ],
- code:"417",
- next:"Le code contient 1, 4 et 7. Le 1 ne peut être ni en 1re ni en 3e position : il est au milieu. Le 7 est alors en 3e, et le 4 en 1re. Code : 417."
+ code:"Woody",
+ next:""
 },
 
+
 {
- title:"LE MESSAGE EN RELAIS",
+ title:"LA REPONSE FINALE",
  intro:"",
  clues:[
-  "<br>N est le nombre de caribous à Disneyland Paris aujourd'hui<br>",
-
-  "<br>Chaque lettre a été avancée de N crans dans l'alphabet (Z devient A)<br>",
-
-  "<br>YVZLYA.<br>"
+  "Dans notre royaume, ils sont 7.",
+  "Six sont déjà prêts pour l'aventure…",
+  "Il n'est ni roi, ni prince, ni héros.",
+  "Pourtant, il a déjà sa place parmi les grands.",
+  "Il est souvent nommé comme connaissance du roi de la savane",
+  "Qui est-ce ?"
  ],
- code:"TRESOR",
-  next:"N = 7. En reculant de 7 crans, YVZLYA devient ROSERT. À l'envers : TRESOR. Vous avez terminé le parcours.",
-  finalCode:"731"
+ code:"Rafael",
+  next:"",
+  finalCode:"Rafael"
 }
 ];
 
