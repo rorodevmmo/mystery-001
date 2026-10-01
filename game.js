@@ -75,7 +75,7 @@ const ROOMS=[
  ],
  code:"Rafael",
   next:"",
-  finalCode:"Rafael"
+  finalCode:"6W 11S 7E 7N 10E 2N 8W 9N 7W 13S"
 }
 ];
 
